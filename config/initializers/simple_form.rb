@@ -16,6 +16,14 @@ module RecommendedComponent
   end
 end
 
+module FedibirdFeaturesComponent
+  def fedibird_features(_wrapper_options = nil)
+    return unless options[:fedibird_features]
+    options[:label_text] = ->(raw_label_text, _required_label_text, _label_present) { safe_join([raw_label_text, ' ', content_tag(:span, I18n.t('simple_form.fedibird_features'), class: 'fedibird_features')]) }
+    nil
+  end
+end
+
 SimpleForm.include_component(AppendComponent)
 SimpleForm.include_component(RecommendedComponent)
 

@@ -1,6 +1,7 @@
 ---
 en:
   simple_form:
+    fedibird_features: Fedibird
     hints:
       account_alias:
         acct: Specify the username@domain of the account you want to move from
@@ -54,6 +55,7 @@ en:
         setting_display_media_default: Hide media marked as sensitive
         setting_display_media_hide_all: Always hide media
         setting_display_media_show_all: Always show media
+        setting_show_follow_button_on_timeline: You can easily check the follow status and build a follow list quickly
         setting_hide_network: Who you follow and who follows you will be hidden on your profile
         setting_noindex: Affects your public profile and post pages
         setting_show_application: The application you use to post will be displayed in the detailed view of your posts
@@ -180,6 +182,7 @@ en:
         setting_display_media_default: Default
         setting_display_media_hide_all: Hide all
         setting_display_media_show_all: Show all
+        setting_show_follow_button_on_timeline: Show follow button on timeline
         setting_expand_spoilers: Always expand posts marked with content warnings
         setting_hide_network: Hide your social graph
         setting_noindex: Opt-out of search engine indexing

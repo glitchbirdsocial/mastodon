@@ -10,6 +10,7 @@ class UserSettingsDecorator
   def update(settings)
     @settings = settings
     process_update
+    profile_change?
   end
 
   private
@@ -42,6 +43,7 @@ class UserSettingsDecorator
     user.settings['use_pending_items']   = use_pending_items_preference if change?('setting_use_pending_items')
     user.settings['trends']              = trends_preference if change?('setting_trends')
     user.settings['crop_images']         = crop_images_preference if change?('setting_crop_images')
+    user.settings['show_follow_button_on_timeline']    = show_follow_button_on_timeline_preference if change?('setting_show_follow_button_on_timeline')
     user.settings['always_send_emails']  = always_send_emails_preference if change?('setting_always_send_emails')
   end
 
@@ -151,6 +153,10 @@ class UserSettingsDecorator
 
   def crop_images_preference
     boolean_cast_setting 'setting_crop_images'
+  end
+
+  def show_follow_button_on_timeline_preference
+    boolean_cast_setting 'setting_show_follow_button_on_timeline'
   end
 
   def always_send_emails_preference

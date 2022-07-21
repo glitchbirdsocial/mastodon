@@ -58,6 +58,7 @@ class InitialStateSerializer < ActiveModel::Serializer
       store[:default_content_type] = object.current_account.user.setting_default_content_type
       store[:system_emoji_font] = object.current_account.user.setting_system_emoji_font
       store[:crop_images]       = object.current_account.user.setting_crop_images
+      store[:show_follow_button_on_timeline]    = object.current_account.user.setting_show_follow_button_on_timeline
     else
       store[:auto_play_gif] = Setting.auto_play_gif
       store[:display_media] = Setting.display_media

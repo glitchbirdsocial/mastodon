@@ -57,6 +57,7 @@ class Settings::PreferencesController < Settings::BaseController
       :setting_use_pending_items,
       :setting_trends,
       :setting_crop_images,
+      :setting_show_follow_button_on_timeline,
       :setting_always_send_emails,
       notification_emails: %i(follow follow_request reblog favourite mention digest report pending_account trending_tag trending_link trending_status appeal),
       interactions: %i(must_be_follower must_be_following must_be_following_dm)

@@ -18,6 +18,7 @@
       = ff.input :reblog, as: :boolean, wrapper: :with_label
       = ff.input :favourite, as: :boolean, wrapper: :with_label
       = ff.input :mention, as: :boolean, wrapper: :with_label
+      = ff.input :status_reference, as: :boolean, wrapper: :with_label, fedibird_features: true
       = ff.input :report, as: :boolean, wrapper: :with_label if current_user.can?(:manage_reports)
       = ff.input :appeal, as: :boolean, wrapper: :with_label if current_user.can?(:manage_appeals)
       = ff.input :pending_account, as: :boolean, wrapper: :with_label if current_user.can?(:manage_users)

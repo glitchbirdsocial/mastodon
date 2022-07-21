@@ -136,6 +136,8 @@ class User < ApplicationRecord
            :expand_spoilers, :default_language, :aggregate_reblogs, :show_application,
            :advanced_layout, :use_blurhash, :use_pending_items, :trends, :crop_images,
            :disable_swiping, :always_send_emails, :default_content_type, :system_emoji_font,
+           :show_follow_button_on_timeline, :show_subscribe_button_on_timeline, :show_target,
+           :show_follow_button_on_timeline, :show_subscribe_button_on_timeline, :show_followed_by, :show_target,
            to: :settings, prefix: :setting, allow_nil: false
 
   delegate :can?, to: :role
